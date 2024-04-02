@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutterproj_new/intropage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,14 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'BenefitBits',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3:true
       ),
-      home: MyHomePage
+      home: const MyHomePage(title: 'BenefitBits'),
     );
   }
 }
@@ -29,221 +27,178 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-   final String title;
+
+  final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
 
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-     // var arrnames = ["Pizza Hut","Cheesiano pizza","Domino's","Mojo pizza"];
-
     return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text('BenefitBits',style:TextStyle(fontFamily: 'newfont')),
-      ),
-       body: Column(
-         children: [
-           Row(
-             children: [
-               ElevatedButton(onPressed: (){print("Button clicked");}, child: Text("Donate")),
-               Text("Donate clothes")
-             ],
-           ),
-         ],
-       )
-      //     return ListTile(
-      //     leading:CircleAvatar(
-      //       backgroundImage: AssetImage('assets/images/dominos.webp'),
-      //       child: Text("${index+1}"),
-      //     ),
-      //     title:Text(arrnames[index]),
-      //     subtitle:Text('Location'),
-      //     trailing:Icon(Icons.add),
-      //
-      //     );
-      //   },
-      //   itemCount:arrnames.length,
-      //    separatorBuilder: (context,index){
-      //     return Divider(height:20 ,thickness:1);
-      //    },),
-      );
-      //   color:Colors.grey,
-      //   margin:EdgeInsets.all(20),
-      //   child:Padding(
-      //     padding: const EdgeInsets.all(11),
-      //     child: Text("Shruti",style:TextStyle(fontSize:45),),
-      //   ),
-      // )
-      //   children:[
-      //     Expanded(
-      //       child: Expanded(
-      //         child: Container(
-      //           height:100,
-      //           width:50,
-      //           color:Colors.red,
-      //         ),
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: Container(
-      //         height:100,
-      //         width:50,
-      //         color:Colors.blue,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: Container(
-      //         height:100,
-      //         width:50,
-      //         color:Colors.pinkAccent,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: Container(
-      //         height:100,
-      //         width:50,
-      //         color:Colors.orange,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: Container(
-      //         height:100,
-      //         width:50,
-      //         color:Colors.grey,
-      //       ),
-      //     ),
-      //   ]
-      // )
-      //   width:double.infinity,
-      //   height:double.infinity,
-      //   color:Colors.blue.shade50,
-      //   child:Center(
-      //     child: Container(
-      //       height:200,
-      //       width:200,
-      //       decoration:BoxDecoration(
-      //         color:Colors.orange,
-      //         borderRadius:BorderRadius.only(topLeft:Radius.circular(30),bottomRight:Radius.circular(30)),
-      //         border:Border.all(
-      //           width:5,
-      //           color:Colors.red,
-      //         ),
-      //         boxShadow: [
-      //           BoxShadow(
-      //             blurRadius: 11,
-      //             spreadRadius: 11,
-      //           )
-      //
-      //         ]
-      //
-      //
-      //       )
-      //     ),
-      //   )
-      //
-      // )
-      //   onTap:(){
-      //     Text("Tapped");
-      //   },
-      //   child: ListView.separated(itemBuilder: (context,index){
-      //     return Text(arrnames[index],style:TextStyle(fontSize: 25,fontWeight:FontWeight.w300 ));
-      //   },
-      //     itemCount:arrnames.length,
-      //     scrollDirection: Axis.vertical,
-      //     separatorBuilder: (context,index){
-      //     return Divider(height:100,thickness:5);
-      //     },
-      //
-      //   ),
-      // )
-      //   child: ListView(
-      //     scrollDirection:Axis.vertical,
-      //     reverse:true,
-      //     children:[
-      //       Padding(
-      //         padding: const EdgeInsets.all(8.0),
-      //         child: Text('Pizza Hut',style:TextStyle(fontSize:35)),
-      //       ),
-      //       Padding(
-      //         padding: const EdgeInsets.all(8.0),
-      //         child: Text("Domino's",style:TextStyle(fontSize:35)),
-      //       ),
-      //       Padding(
-      //         padding: const EdgeInsets.all(8.0),
-      //         child: Text('Mojo Pizza',style:TextStyle(fontSize:35)),
-      //       ),
-      //       Padding(
-      //         padding: const EdgeInsets.all(8.0),
-      //         child: Text('Oven Story',style:TextStyle(fontSize:35)),
-      //       ),
-      //
-      //     ]
-      //   ),
-      // )
-    //     child:Column(
-    //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-    //     crossAxisAlignment: CrossAxisAlignment.stretch,
-    //     children: [
-    //       Text('Welcome to Benefitbits!!',style:TextStyle(fontSize:35)),
-    //       SingleChildScrollView(
-    //         scrollDirection: Axis.horizontal,
-    //         child: Row(
-    //           children:[
-    //           Container(
-    //             height:200,
-    //             width:200,
-    //             color:Colors.lightGreen,
-    //           ),
-    //             Container(
-    //               height:200,
-    //               width:200,
-    //               color:Colors.lightBlueAccent,
-    //             ),
-    //             Container(
-    //               height:200,
-    //               width:200,
-    //               color:Colors.lightGreenAccent,
-    //             ),
-    //
-    //           ]
-    //         ),
-    //       ),
-    //       InkWell(
-    //         child:Image.asset('assets/images/mgflut.jpg'),
-    //         onTap: (){
-    //           print("tapped on image");
-    //         },
-    //         onLongPress: (){
-    //           print("long pressed");
-    //         },
-    //         onDoubleTap: (){
-    //           print("double tapped");
-    //         },
-    //       ),
-    //       Text("Donation saves lives.Come forward and join us for this noble work.You and I can create a difference in someone's life",style: TextStyle(fontSize:30)),
-    //       ElevatedButton(onPressed: (){
-    //
-    //       },child:Text("Donate")),
-    //       Text('BenefitBits aims to connect various non governmental organizations(NGOs) across the city with common people and institutions. The fundamental objective is to provide a medium for fulfilling the various requirements of the NGOs. This is a non profit platform which connects people/institutions who are willing to help and the NGOs which accept donations. Initially we are implementing the app for a single NGO but in the near future we aspire to extend our services to other NGOs as well. Some of the requirements of the NGOs include clothes, books, other academic needs, toiletries, essentials for women and children. After our venture reaches a particular level we aim to include the monetary aspect as well. Individual people/institutions can select their choice of donation and the NGO in need. The contact details of the NGO incharge and their location would be displayed accordingly. New features/functions can be incorporated as the number of registrations increase.',style:TextStyle(fontSize:20)),
-    //
-    //     ]
-    // )
-    //
-    // )
+        appBar: AppBar(
 
+          backgroundColor: Theme
+              .of(context)
+              .colorScheme
+              .inversePrimary,
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+        ),
+        body: Column(
+          children: [
+            Container(
+              width: 900,
+              height: 200,
+
+              child: Text("Welcome to BenefitBits!", style: TextStyle(color: Colors.black,fontSize: 50),),
+
+                ), Container(
+              width :900,
+              height: 200,
+
+              child:CircleAvatar(child: Image.asset('assets/images/bb1.png')),
+            ),
+            Center(
+              child: ElevatedButton(
+                  child: Text("Click to continue!", style: TextStyle(color: Colors.blue),),
+                onPressed:(){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder:(context)=>const MyApp2()),);
+                }
+              ),
+            ),
+            Container(
+              child: Text("About us :" ,style: TextStyle(color: Colors.black, fontSize: 20),),
+            ),
+            Container(
+              child: Text("BenefitBits is an online application which aims to connect the common"
+                  "people with different existing NGOS . It is a non-profit platform through which"
+                  "people can know about the requirements of the various NGOS and accordingly can donate"
+                  "or register as volunteers ! ", style: TextStyle(color: Colors.blue,fontSize: 20),),
+            )
+          ],
+        )
+
+
+        );
 
 
 
   }
+}
+class MyApp2 extends StatelessWidget{
+  const MyApp2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("second route"),
+      ),
+      body: Column(
+        children: [
+          Container(
+            child: ElevatedButton(
+              child: const Text("go back to first page "),
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder:(context)=>const MyApp3()),);
+              },
+            ),
+          ),
+          ElevatedButton(
+          child: const Text("go back to first page "),
+    onPressed: (){
+
+    })
+    ],
+      ),
+    );
+
+  }
+
+
+}
+class MyApp3 extends StatelessWidget{
+  const MyApp3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+        title: const Text("third route"),
+    ),
+    body:Column(
+    children: [
+    ElevatedButton(
+    child: const Text("CLOTHES "),
+    onPressed: (){
+           Navigator.push(context,
+             MaterialPageRoute(builder:(context)=>const MyApp4()),);
+    },
+    ) ,
+    ElevatedButton(
+    child: const Text("Books and stationary "),
+    onPressed: (){
+
+    }
+    ),
+    ElevatedButton(
+    child: const Text("Toiletries "),
+    onPressed: (){
+
+    }),
+    ElevatedButton(
+    child: const Text("Monetary "),
+    onPressed: (){
+
+    }
+    )
+    ],
+    ),
+    );
+
+    }
+}
+class MyApp4 extends StatelessWidget{
+  const MyApp4({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+        title: const Text("fourth route"),
+    ),
+    body:Column(
+      children: [
+        Text("KUMUDINI MEMORIAL TRUST ", style: TextStyle(color: Colors.black,fontSize: 30),),
+        Text("About",style: TextStyle(color: Colors.brown,fontSize: 20),),
+         Text("KUMUDINI MEMORIAL CHARITABLE TRUST WORKS ON THE AWARENESS,"
+             " PREVENTION,TREATMENTS,REHABILITATION AND CURE OF BURNED INJURED PATIENTS.THE MAIN AIM OF THIS NGO IS"
+             "TO MAKE MAJORITY PEOPLE AWARE ABOUT BURN ACCDIDENTS AND IT ALSO WORKS WHOLEHEARTEDLY"
+             "TO RAISE FUNDS FOR THE CURE OF BURN PATIENTS.",style: TextStyle(color: Colors.brown,fontSize: 15),)  ,
+        Text("Requirements :1)Clothes:any kind accepted, except for those with irritable texture"
+            "2)Toiletries:toothbrush/toothpaste , comb , shampoo , burnol - **highly required**,cotton,soap,facewash"
+            "and any kind of personal care material accepted "
+            "3)Monetary:Please visit our website for the qrcode and other details "
+            "no amount limit ",style: TextStyle(color: Colors.black,fontSize: 30),),
+
+      ],
+    )
+
+
+    );
+    }
 }

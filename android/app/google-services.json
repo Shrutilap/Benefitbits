@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "618301097278",
+    "project_id": "benefit-bits-33e89",
+    "storage_bucket": "benefit-bits-33e89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618301097278:android:2a3299cf2849553281586f",
+        "android_client_info": {
+          "package_name": "com.example.flutterproj_new"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU9eBXEXFYjvuw7Q8So9Tv-y9Uv0snJ2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
